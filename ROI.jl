@@ -10,7 +10,7 @@ module ROI
     using Images
     using JSON
 
-    export impJSON, getLabelledFiles
+    export getLabelledFiles, setPolygon, setROI
 
     struct polyROI
         path
