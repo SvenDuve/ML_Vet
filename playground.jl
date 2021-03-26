@@ -48,7 +48,7 @@ Gray.(label2)
 
 i = 0
 fileList = []
-diagnosis = "Katarakt"
+diagnosis = "Neovaskularisation"
 for it in list
     try
         polObj = ROI.setPolygon(it)
@@ -65,7 +65,7 @@ end
 
 pathToImage = "/Users/svenduve/HiDrive/vetData/imageData_small"
 
-d=9
+d=2
 load(joinpath(pathToImage, fileList[d][1]))
 Gray.(ROI.setROI(ROI.setPolygon(joinpath(fileList[d][2])), diagnosis))
 
