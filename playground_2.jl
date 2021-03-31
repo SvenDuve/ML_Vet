@@ -21,3 +21,37 @@ using Flux, Flux.Zygote, Flux.Optimise
 opt = Momentum()
 
 Flux.train!(loss, Flux.params(u), rep, opt);
+
+
+
+## read binary in Julia
+
+X = AbstractVector{Any}
+
+
+read!("/Users/svenduve/Downloads/yolov3-tiny.weights", X)
+
+open(f -> read(f, String), "/Users/svenduve/Downloads/yolov3-tiny.weights")
+
+
+io = open("/Users/svenduve/Downloads/yolov3-tiny.weights", "r")
+
+
+data = Vector{Float32}(undef, sizeof(io))
+
+data = Array{UInt8}(undef, sizeof(io))
+
+open("/Users/svenduve/Downloads/yolov3-tiny.weights", "r") do io
+    readbytes!(io, data)
+end
+
+
+read!(io, data);
+
+X = read(io, String)
+
+readuntil(io, UInt8(0))
+close(io)
+
+
+close("/Users/svenduve/Downloads/yolov3-tiny.weights")
