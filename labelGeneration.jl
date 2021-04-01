@@ -81,6 +81,6 @@ setLabels(origin)
 
 target = "/Users/svenduve/localGitHub/ML_Vet/label"
 
-for file in fileList[1:10]
+for file in fileList[1:12]
     setLabels(file; target)
 end
