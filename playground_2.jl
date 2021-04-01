@@ -55,3 +55,8 @@ close(io)
 
 
 close("/Users/svenduve/Downloads/yolov3-tiny.weights")
+
+
+using RawArray
+
+X = raread("/Users/svenduve/Downloads/yolov3-tiny.weights")
