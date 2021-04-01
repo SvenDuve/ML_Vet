@@ -72,3 +72,4 @@ Gray.(ROI.setROI(ROI.setPolygon(joinpath(fileList[d][2])), diagnosis))
 
 
 
+
