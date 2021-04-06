@@ -5,7 +5,7 @@ origin = "/home/svenduve/darknet/vetTrain/labels"
 target = "/home/svenduve/darknet/vetTrain/images"
 fileList = ROI.getLabelledFiles(origin)
 
-i = 1
+local i = 1
 
 for file in fileList
     try
