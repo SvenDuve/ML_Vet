@@ -29,5 +29,12 @@ end
 
 # prepare file list
 
-ROI.setListFile(fileList, "data.txt")
+target = ""
 
+ROI.setListFile(fileList, target, "train.txt")
+ROI.setListFile(fileList, target, "valid.txt")
+
+
+
+
+pathOnVM = "/home/svenduve/darknet/vetTrain/images"
