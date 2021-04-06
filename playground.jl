@@ -71,5 +71,22 @@ Gray.(ROI.setROI(ROI.setPolygon(joinpath(fileList[d][2])), diagnosis))
 
 
 
+pathToSegmentationImage = "/Users/svenduve/HiDrive/vetData/labelAugendetektion_small"
 
 
+fileList = ROI.getLabelledFiles(pathToSegmentationImage)
+
+
+
+# example label
+# label - 
+#11 0.34135977337110485 0.609 0.4164305949008499 0.262
+#14 0.5070821529745043 0.508 0.9745042492917847 0.972
+
+
+# koordinaten gehen von ursprung links oben aus. Y werte sind positive gehen aber nach unten 
+
+using JSON
+fileJson = JSON.parsefile(fileList[1])
+region = fileJson["regions"][1]["boundingBox"]
+b = (region["left"], region["left"] + region["width"], region["top"], region["top"] + region["height"])

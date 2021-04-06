@@ -21,6 +21,12 @@ module ROI
         points
     end # polyROI
 
+    struct bb
+        path
+
+    end # bb
+
+
 
     function getLabelledFiles(path)
 
