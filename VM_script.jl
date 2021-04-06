@@ -5,16 +5,13 @@ origin = "/home/svenduve/darknet/vetTrain/labels"
 target = "/home/svenduve/darknet/vetTrain/images"
 fileList = ROI.getLabelledFiles(origin)
 
-local i = 1
 
 for file in fileList
     try
-        println(i)
         ROI.setLabels(file; target);
     catch
         @warn "Could not write $(file)"
     end
-    i += 1
 end
 
 
