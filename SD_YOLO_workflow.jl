@@ -11,7 +11,8 @@ using JSON
 # read label data
 
 origin = "/Users/svenduve/HiDrive/vetData/labelAugendetektion_small/"
-target = "/Users/svenduve/localGitHub/ML_Vet/label"
+#target = "/Users/svenduve/localGitHub/ML_Vet/label"
+target = "/Users/svenduve/darknet/vetTrain/labels"
 fileList = ROI.getLabelledFiles(origin)
 
 i = 1
@@ -29,5 +30,9 @@ end
 
 # prepare file list
 
-ROI.setListFile(fileList, "data.txt")
+origin = "/Users/svenduve/HiDrive/vetData/imageData_small/"
+
+ROI.setListFile(fileList[1:10], origin, "train.txt")
+
+ROI.setListFile(fileList[11:14], origin, "valid.txt")
 

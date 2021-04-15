@@ -101,14 +101,14 @@ module ROI
 
     end #convertCoord
 
-    function setListFile(fileList, name)
+    function setListFile(fileList, origin, name)
 
         open(name, "w") do io
 
             for file in fileList
                 try
                     assetFile = JSON.parsefile(file)
-                    write(io, "$(assetFile["asset"]["name"])\n")                    
+                    write(io, origin * "$(assetFile["asset"]["name"])\n")                    
                 catch
                     @warn "Could not write $(file)"
                 end
