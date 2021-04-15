@@ -101,22 +101,14 @@ module ROI
 
     end #convertCoord
 
-<<<<<<< HEAD
     function setListFile(fileList, origin, name)
-=======
-    function setListFile(fileList, target, name)
->>>>>>> main
 
         open(name, "w") do io
 
             for file in fileList
                 try
                     assetFile = JSON.parsefile(file)
-<<<<<<< HEAD
                     write(io, origin * "$(assetFile["asset"]["name"])\n")                    
-=======
-                    write(io, target * "$(assetFile["asset"]["name"])\n")                    
->>>>>>> main
                 catch
                     @warn "Could not write $(file)"
                 end

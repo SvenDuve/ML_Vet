@@ -30,15 +30,11 @@ end
 
 # prepare file list
 
-<<<<<<< HEAD
 origin = "/Users/svenduve/HiDrive/vetData/imageData_small/"
 
 ROI.setListFile(fileList[1:10], origin, "train.txt")
 
 ROI.setListFile(fileList[11:14], origin, "valid.txt")
-=======
-target = ""
->>>>>>> main
 
 ROI.setListFile(fileList, target, "train.txt")
 ROI.setListFile(fileList, target, "valid.txt")
